@@ -53,8 +53,12 @@ h1 {
 
 #logo {
     padding: 5px;
-    max-height: 75px;
-    max-width: 75px;
+    max-height: 40px;
+    max-width: 40px;
+    margin: 10px;
+}
+#logo:hover{
+    transform: scale(3);
 }
 
 
