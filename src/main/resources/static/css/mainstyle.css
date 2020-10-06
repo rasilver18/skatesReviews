@@ -1,0 +1,60 @@
+.background{
+    background-color: rgb(137, 178, 229);
+    margin: auto;
+    max-width: 100%;
+
+}
+h1 {
+    background-color: rgb(241, 159, 70);
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+#text {
+    color: rgb(248, 245, 245);
+    font-size: 20px;
+    font-weight: bold;
+}
+#text {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(241, 159, 70);
+    border-radius: 15px;
+    width: 200px;
+}
+
+#text:hover {
+    background-color: aquamarine;
+    transition: 0.5s;
+}
+.images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 50%;
+    max-height: 40%;
+    margin: auto;
+}
+
+#skates:hover{
+    transform: scale(1.5);
+
+}
+#skates{
+    width: 200px;
+    height: 200px;
+}
+
+#logo {
+    padding: 5px;
+    max-height: 75px;
+    max-width: 75px;
+}
+
+

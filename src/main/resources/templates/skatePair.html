@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/mainStyle.css"></link>
+    <link rel="stylesheet" type="text/css" href="/css/subStyle.css"></link>
+
+    <title th:text="${skateModel.name}">Pair of Skates</title>
+</head>
+<body>
+<div class="background">
+<header>
+    <h1 th:text="${skateModel.name}">Set of Skates</h1>
+</header>
+<main>
+    <nav class="nav">
+    <ul>
+        <li><a href="/skates">All Skates</a></li>
+    </ul>
+    </nav>
+    <section class="content">
+    <img id="pair" th:src="${skateModel.image}" />
+     <article id="description">
+    <h2>Description and Review:</h2>
+    <h3 th:text="${skateModel.description}"></h3>
+     </article>
+     <article id ="category">
+        <h2>Category</h2>
+    <h3 th:text="${skateModel.category}"></h3>
+     </article>
+    </section>
+</main>
+<footer>
+    <img id="logo" href="/images/logo.jpg" />
+    <small>&copy A Silver Cloud 2020</small>
+</footer>
+</div>
+</body>
+</html>
