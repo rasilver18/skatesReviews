@@ -1,1 +1,33 @@
-<!-- -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/mainStyle.css"></link>
+    <title>Categories</title>
+</head>
+<body>
+<div class="background">
+    <header>
+        <h1>Categories</h1>
+    </header>
+    <main>
+        <nav class="nav">
+            <ul>
+                <li><a href="/skates">All Skates</a></li>
+            </ul>
+        </nav>
+        <section class="images">
+            <!--        <article id="text" th:each="skates: ${skatesModel}"><a th:href="@{/skater(id=${skates.id})}" th:text="${skates.name}" ></a><article>-->
+            <a th:each="category: ${categories}" th:href="@{/categories/${category.id}}" >
+                <h3 id="text" th:text="${category.skateType}"></h3>
+                <img id="skates" th:src="${category.typeImage}" />
+            </a>
+        </section>
+    </main>
+    <footer>
+        <img id="logo" th:src="@{/images/logo.jpg}" />
+        <small>&copy A Silver Cloud 2020</small>
+    </footer>
+</div>
+</body>
+</html>

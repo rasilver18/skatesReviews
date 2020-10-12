@@ -16,6 +16,7 @@
     <nav class="nav">
     <ul>
         <li><a href="/skates">All Skates</a></li>
+        <li><a href="/categories">Skates by Category</a></li>
     </ul>
     </nav>
     <section class="content">
@@ -25,8 +26,8 @@
     <h3 th:text="${skateModel.description}"></h3>
      </article>
      <article id ="category">
-        <h2>Category</h2>
-    <h3 th:text="${skateModel.category}"></h3>
+        <h2 >Category</h2>
+    <h3 th:text="${skateModel.category.skateType}" ></h3>
      </article>
     </section>
 </main>

@@ -14,16 +14,18 @@ public class Category {
     @Id
     @GeneratedValue
     private Long id;
-    private String category;
+    private String skateType;
+    private String typeImage;
     @OneToMany(mappedBy = "category")
     private Collection<Skates> skates;
 
     public Long getId(){
         return id;
     }
-    public String getCategory(){
-        return category;
+    public String getSkateType(){
+        return skateType;
     }
+    public String getTypeImage(){return typeImage;}
 
     public Collection<Skates> getSkates(){
         return skates;
@@ -31,8 +33,9 @@ public class Category {
     public Category(){
 
     }
-    public Category(String category){
-        this.category=category;
+    public Category(String skateType, String typeImage){
+        this.skateType=skateType;
+        this.typeImage= typeImage;
 //       this.skates = new HashSet<>(Arrays.asList(skates));
     }
 //    for(Skates skate : skates){

@@ -19,10 +19,10 @@ public class TypeController {
         model.addAttribute("categories", typeRepo.findAll());
         return "categories";
     }
-    @GetMapping("/categories/{category}")
-    public String displayOneCategory(@PathVariable String category, Model model){
-        Category retrievedCategory = typeRepo.findSkatesByCategory(category);
-        model.addAttribute("category", retrievedCategory);
+    @GetMapping("/categories/{skateType}")
+    public String displayOneCategory(@PathVariable String skateType, Model model){
+        Category retrievedCategory = typeRepo.findSkatesBySkateType(skateType);
+        model.addAttribute("skateType", retrievedCategory);
         return "category";
     }
 }

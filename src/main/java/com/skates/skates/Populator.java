@@ -14,9 +14,9 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Category trackSkates = new Category("Track Skates");
-        Category parkSkates = new Category ("Park Skates");
-        Category trailSkates = new Category ("Trail Skates");
+        Category trackSkates = new Category("Track Skates", "/images/reidell.jpg");
+        Category parkSkates = new Category ("Park Skates", "/images/babyvans.jpg");
+        Category trailSkates = new Category ("Trail Skates", "/images/orangesharks.jpg");
         typeRepo.save(trackSkates);
         typeRepo.save(parkSkates);
         typeRepo.save(trailSkates);

@@ -11,11 +11,11 @@
     <h1>Roller Skates: A Review</h1>
 </header>
 <main>
-<!--    <nav class="nav">-->
-<!--    <ul>-->
-<!--        -->
-<!--    </ul>-->
-<!--    </nav>-->
+    <nav class="nav">
+    <ul>
+        <li><a href="/categories">Skates by Category</a></li>
+    </ul>
+    </nav>
     <section class="images">
 <!--        <article id="text" th:each="skates: ${skatesModel}"><a th:href="@{/skater(id=${skates.id})}" th:text="${skates.name}" ></a><article>-->
     <a th:each="skates: ${skatesModel}" th:href="@{/skater(id=${skates.id})}" >
