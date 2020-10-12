@@ -6,11 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
+import java.util.Optional;
 
 @Controller
 public class SkateController {
     @Resource
     private SkateRepository skateRepo;
+
 
     @RequestMapping("/skates")
     public String findAllSkates(Model model) {
@@ -20,7 +22,9 @@ public class SkateController {
 
     @RequestMapping("/skater")
     public String findSkatePair(@RequestParam(value = "id") Long id, Model model) {
-        model.addAttribute("skateModel", skateRepo.findOne(id));
+        Optional<Skates> retrievedSkate =skateRepo.findById(id);
+        Skates foundSkate =retrievedSkate.get();
+        model.addAttribute("skateModel", foundSkate);
         return "skatePair";
     }
 

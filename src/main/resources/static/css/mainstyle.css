@@ -41,6 +41,10 @@ h1 {
     max-height: 40%;
     margin: auto;
 }
+.images a{
+    margin: 0px auto;
+
+}
 
 #skates:hover{
     transform: scale(1.5);

@@ -42,13 +42,13 @@ public class SkateControllerMvcTest {
     @Test
     public void shouldBeOKForASkatePairInTemplate() throws Exception{
         Long skatePairOneId=1L;
-        when(skateRepo.findOne(skatePairOneId)).thenReturn(skatesOne);
+        when(skateRepo.findById(skatePairOneId)).thenReturn(skatesOne);
         mockMvc.perform(get("/skater?id=1")).andExpect(status().isOk()).andExpect(view().name("skatePair"));
     }
     @Test
     public void shouldFindASkatePairInModel() throws Exception{
         Long skatePairOneId=1L;
-        when(skateRepo.findOne(skatePairOneId)).thenReturn(skatesOne);
+        when(skateRepo.findById(skatePairOneId)).thenReturn(skatesOne);
         mockMvc.perform(get("/skater?id=1")).andExpect(model().attribute("skateModel", skatesOne));
     }
 
