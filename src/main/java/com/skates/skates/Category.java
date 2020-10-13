@@ -35,11 +35,11 @@ public class Category {
     public Category(){
 
     }
-    public Category(String skateType, String typeImage, String description){
+    public Category(String skateType, String typeImage, String description, Skates...skates){
         this.skateType=skateType;
         this.typeImage= typeImage;
         this.description=description;
-//        this.skates = new HashSet<>(Arrays.asList(skates));
+        this.skates = new HashSet<>(Arrays.asList(skates));
     }
 //    for(Skates skate : skates){
 //        skates.setCategory(this);

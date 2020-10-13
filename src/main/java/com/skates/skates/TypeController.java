@@ -13,8 +13,9 @@ import java.util.Collection;
 public class TypeController {
     @Resource
     private TypeRepository typeRepo;
+    @Resource SkateRepository skateRepo;
 
-    @RequestMapping({"/categories" ,"/" ,""})
+    @RequestMapping({"/categories"})
     public String displayTypes(Model model){
         model.addAttribute("categories", typeRepo.findAll());
         return "categories";

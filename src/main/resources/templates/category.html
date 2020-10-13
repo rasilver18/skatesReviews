@@ -10,7 +10,7 @@
 <body>
 <div class="background">
     <header>
-        <h1 th:text="${skateType.skateType}">Set of Skates</h1>
+        <h1 th:text="${skateType.skateType}">Skate Type</h1>
     </header>
     <main>
         <nav class="nav">
@@ -20,14 +20,14 @@
             </ul>
         </nav>
         <section class="content">
-            <article id="description">
-                <h2>Description and Review:</h2>
+            <article id="typeDescription">
+                <h2>Type Function</h2>
                 <h3 th:text="${skateType.description}"></h3>
             </article>
             <img id="pair" th:src="${skateType.typeImage}" />
 
             <article id ="category">
-                <h2>Category</h2>
+                <h2>Skates in Category</h2>
                 <h3 th:text="${skateType.skates}" href="/"></h3>
             </article>
         </section>

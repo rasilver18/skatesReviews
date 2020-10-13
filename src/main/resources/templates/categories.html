@@ -14,12 +14,12 @@
         <nav class="nav">
             <ul>
                 <li><a href="/skates">All Skates</a></li>
-                <li><a href="/categories">Skates by Category</a></li>
             </ul>
         </nav>
         <section class="images">
             <!--        <article id="text" th:each="skates: ${skatesModel}"><a th:href="@{/skater(id=${skates.id})}" th:text="${skates.name}" ></a><article>-->
-            <a th:each="category: ${categories}" th:href="@{/categories/${category.id}}" >
+
+            <a th:each="category: ${categories}" th:href="@{'/categories/' + ${category.skateType}}">
                 <h3 id="text" th:text="${category.skateType}"></h3>
                 <img id="skates" th:src="${category.typeImage}" />
             </a>

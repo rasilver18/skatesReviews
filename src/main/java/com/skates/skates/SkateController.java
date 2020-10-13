@@ -12,6 +12,8 @@ import java.util.Optional;
 public class SkateController {
     @Resource
     private SkateRepository skateRepo;
+    @Resource
+    private TypeRepository typeRepo;
 
 
     @RequestMapping("/skates")

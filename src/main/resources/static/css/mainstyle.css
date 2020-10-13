@@ -51,11 +51,11 @@ h1 {
 
 }.nav ul li {
      background-color: rgb(241, 159, 70);
-     width: 100px;
-     height: 40px;
+     width: 200px;
+     height: 30px;
      border-radius: 15px;
      margin: 30px;
-     padding: 11px;
+     padding: 5px;
      text-align: center;
      color: rgb(248, 245, 245);
      font-size: 20px;
@@ -69,8 +69,7 @@ h1 {
 }
 .nav ul li {
     list-style-type: none;
-    display: inline;
-}
+    }
 .nav ul li:hover{
     background-color: aquamarine;
     transition: 0.5s;
