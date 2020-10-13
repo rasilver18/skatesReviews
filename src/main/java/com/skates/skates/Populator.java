@@ -14,9 +14,12 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Category trackSkates = new Category("Track Skates", "/images/reidell.jpg");
-        Category parkSkates = new Category ("Park Skates", "/images/babyvans.jpg");
-        Category trailSkates = new Category ("Trail Skates", "/images/orangesharks.jpg");
+        Category trackSkates = new Category("Track Skates", "/images/legs.jpg",
+                "These skates are ideal for Roller Derby. Generally these skates have a harder wheel and a flatter sole. This allows for greater stability and agility on the track");
+        Category parkSkates = new Category ("Park Skates", "/images/rainbowpark.jpg",
+                "Wear these skates when going on the skate park. These skates can be equipped with slides on the bottom to allow for rail work. Often a softer wheel to allow for outdoor terrain. Some trail skates can also be used as park skates");
+        Category trailSkates = new Category ("Trail Skates", "/images/banana.jpg",
+                "These skates are perfect for outdoor skating on any pavement. Most outdoor skates have a slight heel on them which shifts your weight forward, making jumps and other tricks easier. ");
         typeRepo.save(trackSkates);
         typeRepo.save(parkSkates);
         typeRepo.save(trailSkates);

@@ -16,6 +16,7 @@ public class Category {
     private Long id;
     private String skateType;
     private String typeImage;
+    private String description;
     @OneToMany(mappedBy = "category")
     private Collection<Skates> skates;
 
@@ -26,6 +27,7 @@ public class Category {
         return skateType;
     }
     public String getTypeImage(){return typeImage;}
+    public String getDescription(){return description;}
 
     public Collection<Skates> getSkates(){
         return skates;
@@ -33,10 +35,11 @@ public class Category {
     public Category(){
 
     }
-    public Category(String skateType, String typeImage){
+    public Category(String skateType, String typeImage, String description){
         this.skateType=skateType;
         this.typeImage= typeImage;
-//       this.skates = new HashSet<>(Arrays.asList(skates));
+        this.description=description;
+//        this.skates = new HashSet<>(Arrays.asList(skates));
     }
 //    for(Skates skate : skates){
 //        skates.setCategory(this);
