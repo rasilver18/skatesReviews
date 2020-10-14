@@ -7,6 +7,14 @@
     margin-left: 40%;
     margin-right: 40%;
 }
+
+.contentType{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 80%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
 #pair{
     height: 400px;
     width: 400px;
@@ -33,8 +41,7 @@
     color: black;
     text-align: center;
     border-radius: 5%;
-    margin-top: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 
 }
 #typeDescription:hover{
@@ -53,6 +60,22 @@
     background-color: rgb(241, 159, 70);
     transition: 0.5s;
 }
+#categorySkates{
+    width: 60%;
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+    border-radius: 5%;
+    max-width: 80%;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+#categorySkates:hover{
+    background-color: rgb(241, 159, 70);
+    transition: 0.5s;
+}
+
 
 
 

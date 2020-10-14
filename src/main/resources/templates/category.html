@@ -19,18 +19,21 @@
                 <li><a href="/categories">Skates by Category</a></li>
             </ul>
         </nav>
-        <section class="content">
+        <section class="contentType">
             <article id="typeDescription">
                 <h2>Type Function</h2>
                 <h3 th:text="${skateType.description}"></h3>
             </article>
-            <img id="pair" th:src="${skateType.typeImage}" />
 
-            <article id ="category">
-                <h2>Skates in Category</h2>
-                <h3 th:text="${skateType.skates}" href="/"></h3>
-            </article>
         </section>
+            <article id ="categorySkates">
+                <h2>Skates in Category</h2>
+                <a th:each="skates: ${skateType.skates}" th:href="@{/skater(id=${skates.id})}" >
+<!--                <h3 th:each="skateModel:${skateType.skates}"></h3>-->
+                    <img id="skates" th:src="${skates.image}" />
+                </a>
+            </article>
+
     </main>
     <footer>
         <img id="logo" th:src="@{/images/logo.jpg}" />

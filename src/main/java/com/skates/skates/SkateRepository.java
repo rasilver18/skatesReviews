@@ -8,9 +8,8 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-@Repository
 public interface SkateRepository extends CrudRepository<Skates, Long> {
-//    Map<Long, Skates> skatesList = new HashMap<>();
+//   Map<Long, Skates> skatesList = new HashMap<>();
 //    @Resource
 //    TypeRepository typeRepo;
 //
@@ -36,7 +35,7 @@ public interface SkateRepository extends CrudRepository<Skates, Long> {
 //    }
 //
 //    public Skates findOne(long id){
-//        return skatesList.get(id);
+//        return skates.get(id);
 //    }
 //
 //

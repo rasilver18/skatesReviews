@@ -27,9 +27,9 @@
      </article>
      <article id ="category">
         <h2 >Category</h2>
-<!--         <a th:each="skateModel.category.skateType" href="/categories + ${category.skateType}"></a>-->
+         <a th:href="@{'/categories/' + ${skateModel.category.skateType}}">
     <h3 th:text="${skateModel.category.skateType}" ></h3>
-
+             <!--         </a>--></a>
      </article>
     </section>
 </main>
